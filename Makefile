@@ -3,10 +3,14 @@
 # Compiler and flags
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -pedantic -O2
-LDFLAGS =
+# For GUI version
+# SFML linker flags
+LDFLAGS = -lsfml-graphics -lsfml-window -lsfml-system
 
 # Source files
-SRCS = main.cpp GameModel.cpp ConsoleView.cpp GameController.cpp
+# For GUI version 
+# SRCS = main.cpp GameModel.cpp ConsoleView.cpp GameController.cpp
+SRCS = main.cpp GameModel.cpp GuiView.cpp GuiController.cpp
 # Object files
 OBJS = $(SRCS:.cpp=.o)
 
